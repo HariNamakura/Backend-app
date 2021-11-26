@@ -1,5 +1,7 @@
 package ucundi.edu.co.application.model;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -18,7 +20,7 @@ import lombok.RequiredArgsConstructor;
 @NoArgsConstructor
 
 @Table(name = "usuario")
-public class User {
+public class User implements Serializable {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

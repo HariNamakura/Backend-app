@@ -30,7 +30,4 @@ public class Funcionario implements Serializable{
     @Column(name = "funcionario_name")
     private String name;
 
-    /* @OneToOne(mappedBy = "funcionario", cascade = CascadeType.ALL)
-    private Produccion produccion; */
-
 }
