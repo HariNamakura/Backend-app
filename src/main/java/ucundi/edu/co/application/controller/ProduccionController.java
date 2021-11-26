@@ -27,21 +27,21 @@ public class ProduccionController {
     @Autowired
     private ProducionService producionService;
 
-   /*  @Autowired
-    private ProduccionRepository produccionRepository; */
+    @Autowired
+    private ProduccionRepository produccionRepository;
     
 
-    @GetMapping("/all")
+    /* @GetMapping("/all")
     public List<Produccion> getAll(){
         return producionService.getAll();
-    }
+    } */
 
-    /* @GetMapping("/all")
-    ModelAndView Busqueda(){
+    @GetMapping("/all")
+    ModelAndView index(){
         List<Produccion> produccions = produccionRepository.getAll();
 
-        return new ModelAndView("Busqueda").addObject("produccions", produccions);
-    } */
+        return new ModelAndView("index").addObject("produccions", produccions);
+    }
 
     @GetMapping("{id}")
     public Optional<Produccion> getProduccion(@PathVariable int id){
